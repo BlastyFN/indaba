@@ -1,0 +1,241 @@
+:root {
+    --blanco: #eff1ed;
+    --negro: #1f2421;
+    --olivo: #8CB369;
+    --amarillo: #F4E285;
+    --naranja: #F4A259;
+    --hoja: #5B8E7D;
+    --arcilla: #BC4B51;
+    --fuente-principal: Ubuntu, sans-serif;
+    --fuente-secundaria: Inter;
+    --negro-transparente: #1f242150;
+    --hoja-transparente: #5B8E7D50;
+    --arcilla-trasnparente: #BC4B5150;
+    --naranja-transparente: #F4A25950;
+    --amarillo-transparente: #F4E285;
+    --olivo-transparente: #8CB36950;
+}
+
+
+.fondo-blanco{
+    background-color: var(--blanco);
+}
+
+/* Clases de fondo para cada color */
+
+.fondo-negro {
+    background-color: var(--negro);
+  }
+  
+  .fondo-olivo {
+    background-color: var(--olivo);
+  }
+  
+  .fondo-amarillo {
+    background-color: var(--amarillo);
+  }
+  
+  .fondo-naranja {
+    background-color: var(--naranja);
+  }
+  
+  .fondo-hoja {
+    background-color: var(--hoja);
+  }
+  
+  .fondo-arcilla {
+    background-color: var(--arcilla);
+  }
+  
+  /* Clases de fondo para los colores transparentes */
+  
+  .fondo-negro-transparente {
+    background-color: var(--negro-transparente);
+  }
+  
+  .fondo-hoja-transparente {
+    background-color: var(--hoja-transparente);
+  }
+  
+  .fondo-arcilla-transparente {
+    background-color: var(--arcilla-trasnparente);
+  }
+  
+  .fondo-naranja-transparente {
+    background-color: var(--naranja-transparente);
+  }
+  
+  .fondo-amarillo-transparente {
+    background-color: var(--amarillo-transparente);
+  }
+  
+  .fondo-olivo-transparente {
+    background-color: var(--olivo-transparente);
+  }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+    background-color: var(--blanco);
+  }
+
+
+h1, h2{
+    font-family: var(--fuente-principal);
+    color: var(--negro);
+    margin: 0px;
+}
+
+p{
+    font-family: var(--fuente-secundaria);
+    color: var(--negro);
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    background-color: var(--negro-transparente);
+    position: fixed;
+    top: 0;
+    padding: 0px 24px;
+    width: 100%;
+}
+header h1{
+    color: var(--blanco);
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+nav ul li a{
+    color: var(--blanco);
+    font-family: var(--fuente-principal);
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 8px;
+}
+
+nav ul li a:hover{
+    color: var(--blanco);
+    background-color: var(--negro);
+}
+
+.navSelected{
+    color: var(--blanco);
+    background-color: var(--negro);
+}
+
+
+.img-main{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--arcilla);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.country-title{
+    color: var(--blanco);
+    font-size: 50px;
+    background-color: var(--negro-transparente);    
+    padding: 16px;    
+}
+
+article{
+    width: 70%;
+    margin: 22px 0px;
+    margin-left: 15%;
+}
+
+.main-article{
+    display: flex;
+
+}
+
+.main-article h1{
+    color: var(--blanco);
+    
+    text-align: center;
+    padding: 16px;
+    font-size: 30px;
+    margin: 0;
+}
+
+.main-article p{
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.main-article a{
+    color: var(--blanco);
+    background-color: var(--negro);
+    padding: 8px 12px;
+    font-weight: bold;
+    text-decoration: none;
+   text-align: center;
+   display: block;
+   font-size: 18px;
+    
+}
+
+.main-article a:hover{
+    background-color: var(--negro-transparente);
+    color: var(--negro);
+}
+.article-text{
+    width: 45%;
+}
+
+.article-paragraph{
+    padding: 16px;
+}
+
+.article-img{
+    background-color: var(--negro);
+    width: 70%;
+}
+
+.foto-cover{
+    background-size: cover;
+    background-position: center;
+}
+
+.main-australia{
+    background-image: url('./../assets/australia-main.jpg');
+    
+}
+
+  .main-historia{
+    background-image: url('./../assets/main-historia.jpg');
+  }
+
+.main-destino{
+    background-image: url('./../assets/main-destino.jpg');
+}
+
+.main-medida{
+    background-image: url('./../assets/main-medida.jpg');
+
+}
+
+
+footer{
+    background-color: var(--negro);
+    padding: 22px;
+}
+
+footer p{
+    margin: 0;
+    color: var(--blanco);
+
+}
