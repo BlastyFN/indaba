@@ -156,10 +156,12 @@ article{
     margin-left: 15%;
 }
 
-.main-article{
-    display: flex;
-
+.main-article {
+  display: flex;
+ 
 }
+
+
 
 .main-article h1{
     color: var(--blanco);
@@ -215,6 +217,25 @@ article{
     
 }
 
+.main-indonesia{
+    background-image: url('./../assets/indonesia-main.jpg');
+
+}
+
+.main-costarica{
+    background-image: url('./../assets/costarica-main.jpg');
+
+}
+
+.main-suecia{
+    background-image: url('./../assets/suecia-main.jpg');
+
+}
+
+.main-sudafrica{
+    background-image: url('./../assets/sudafrica-main.jpg');
+
+}
   .main-historia{
     background-image: url('./../assets/main-historia.jpg');
   }
