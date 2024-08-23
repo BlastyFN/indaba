@@ -1,7 +1,8 @@
 
 const mainIMG = document.getElementById("mainFrame");
 const mainTXT = document.getElementById("country-title");
-
+const leftArrow = document.getElementById("arrow-left");
+const rightArrow = document.getElementById("arrow-right");
 const paises = [
     {
         img: "sudafrica",
@@ -27,20 +28,32 @@ const paises = [
 
 
 var pos = 0;
-function changeBCK() {
-    mainTXT.textContent = paises[pos].txt;
-    mainIMG.className = `img-main main-${paises[pos].img} foto-cover`
-    if (pos == 4) {
-        pos = 0;
-    }
-    else{
-        pos++;
-    }
-    
+leftArrow.addEventListener('click', () => {
+    pos = (pos - 1 + paises.length) % paises.length;
+    changeBCK();
+  });
+  const moveRight = () =>{
+    pos = (pos + 1) % paises.length;
+    changeBCK();
   }
   
-  // Ejecuta changeBCK cada 7000 milisegundos (7 segundos)
-  const intervalo = setInterval(changeBCK, 12000);
+  rightArrow.addEventListener('click', moveRight);
 
 
-console.log('Script cargado correctamente'); // Mensaje de depuración para verificar
+  
+function changeBCK() {
+
+    mainIMG.classList.add('fade-in-out');
+    setTimeout(() => {
+        mainTXT.textContent = paises[pos].txt;
+        mainIMG.className = `img-main main-${paises[pos].img} foto-cover box-shadow`;
+        mainIMG.classList.remove('fade-in-out');
+
+        
+    }, 1500); 
+  }
+
+  const intervalo = setInterval(moveRight, 15000);
+
+
+console.log('Script cargado correctamente');

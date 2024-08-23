@@ -1,138 +1,24 @@
-:root {
-    --blanco: #eff1ed;
-    --negro: #1f2421;
-    --olivo: #8CB369;
-    --amarillo: #F4E285;
-    --naranja: #F4A259;
-    --hoja: #5B8E7D;
-    --arcilla: #BC4B51;
-    --fuente-principal: Ubuntu, sans-serif;
-    --fuente-secundaria: Inter;
-    --negro-transparente: #1f242150;
-    --hoja-transparente: #5B8E7D50;
-    --arcilla-trasnparente: #BC4B5150;
-    --naranja-transparente: #F4A25950;
-    --amarillo-transparente: #F4E285;
-    --olivo-transparente: #8CB36950;
-}
 
+@media (max-width: 768px) {
+    article{
+        width: 100%;
+    }
+    .main-article {
+      flex-direction: column; /* Cambia a dirección vertical en pantallas pequeñas */
+    }
 
-.fondo-blanco{
-    background-color: var(--blanco);
-}
+  }
 
-/* Clases de fondo para cada color */
-
-.fondo-negro {
-    background-color: var(--negro);
-  }
-  
-  .fondo-olivo {
-    background-color: var(--olivo);
-  }
-  
-  .fondo-amarillo {
-    background-color: var(--amarillo);
-  }
-  
-  .fondo-naranja {
-    background-color: var(--naranja);
-  }
-  
-  .fondo-hoja {
-    background-color: var(--hoja);
-  }
-  
-  .fondo-arcilla {
-    background-color: var(--arcilla);
-  }
-  
-  /* Clases de fondo para los colores transparentes */
-  
-  .fondo-negro-transparente {
+.arrow{
+    color: var(--blanco);
+    font-size: 50px;
     background-color: var(--negro-transparente);
-  }
-  
-  .fondo-hoja-transparente {
-    background-color: var(--hoja-transparente);
-  }
-  
-  .fondo-arcilla-transparente {
-    background-color: var(--arcilla-trasnparente);
-  }
-  
-  .fondo-naranja-transparente {
-    background-color: var(--naranja-transparente);
-  }
-  
-  .fondo-amarillo-transparente {
-    background-color: var(--amarillo-transparente);
-  }
-  
-  .fondo-olivo-transparente {
-    background-color: var(--olivo-transparente);
-  }
-
-html, body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 16px;
-    font-family: sans-serif;
-    background-color: var(--blanco);
-  }
-
-
-h1, h2{
-    font-family: var(--fuente-principal);
-    color: var(--negro);
-    margin: 0px;
+    border-style: none;
 }
-
-p{
-    font-family: var(--fuente-secundaria);
+.arrow:hover{
+    cursor: pointer;
     color: var(--negro);
 }
-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 0;
-    background-color: var(--negro-transparente);
-    position: fixed;
-    top: 0;
-    padding: 0px 24px;
-    width: 100%;
-}
-header h1{
-    color: var(--blanco);
-}
-nav ul{
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-nav ul li a{
-    color: var(--blanco);
-    font-family: var(--fuente-principal);
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 8px;
-}
-
-nav ul li a:hover{
-    color: var(--blanco);
-    background-color: var(--negro);
-}
-
-.navSelected{
-    color: var(--blanco);
-    background-color: var(--negro);
-}
-
-
 .img-main{
     width: 100%;
     height: 100vh;
@@ -140,9 +26,13 @@ nav ul li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    transition: background-image 1.5s ease-in-out, opacity 1.5s ease-in-out;
+    opacity: 1;
 }
-
+.fade-in-out {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
 .country-title{
     color: var(--blanco);
     font-size: 50px;
@@ -152,8 +42,11 @@ nav ul li a:hover{
 
 article{
     width: 70%;
-    margin: 22px 0px;
+    margin: 75px 0px;
     margin-left: 15%;
+    
+
+
 }
 
 .main-article {
@@ -207,35 +100,7 @@ article{
     width: 70%;
 }
 
-.foto-cover{
-    background-size: cover;
-    background-position: center;
-}
 
-.main-australia{
-    background-image: url('./../assets/australia-main.jpg');
-    
-}
-
-.main-indonesia{
-    background-image: url('./../assets/indonesia-main.jpg');
-
-}
-
-.main-costarica{
-    background-image: url('./../assets/costarica-main.jpg');
-
-}
-
-.main-suecia{
-    background-image: url('./../assets/suecia-main.jpg');
-
-}
-
-.main-sudafrica{
-    background-image: url('./../assets/sudafrica-main.jpg');
-
-}
   .main-historia{
     background-image: url('./../assets/main-historia.jpg');
   }
@@ -250,13 +115,14 @@ article{
 }
 
 
-footer{
-    background-color: var(--negro);
-    padding: 22px;
+.main-zulu{
+    background-image: url("https://future-trans.com/wp-content/uploads/2018/04/wepik-export-20230615110448rAEH-scaled.jpeg");
 }
 
-footer p{
-    margin: 0;
-    color: var(--blanco);
+.main-eco{
+    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIqascpaePnUoxy-xGvxEtdwy00_qLxPyE0eEwWn6WuKbnN2OLCOA5rvnjsDk3PUExZ4Bqb4XBqT5zePVe9uLFs1ygJCzh2ehEDPi8Efp5xHbIHZv1P8mKlbi3a-atvmnq26Z94Gp1yd_C/s1600/20467__940x_keemala-tree-house-with-pool-hr.jpg");
+}
 
+.main-sky{
+    background-image: url("https://i.pinimg.com/564x/9d/1c/82/9d1c82b18a88eae4cbd4e7801ad8719e.jpg");
 }

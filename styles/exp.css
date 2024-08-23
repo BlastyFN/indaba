@@ -1,0 +1,179 @@
+.exp-nav{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items:end;
+}
+
+.expSelSection{
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    justify-content: center;
+    background-color: var(--naranja);
+}
+
+.expSel{
+    margin: 0;
+    border-radius: 0;
+    border-style: none;
+    padding: 16px;
+}
+
+.expSel{
+    cursor: pointer;
+    color: var(--blanco);
+    font-size: 16px;
+    font-family: var(--main-font);
+    font-weight: bold;
+}
+
+.expSel:hover{
+    text-decoration:underline;
+}
+
+.expTitle{
+    text-align: center;
+    color: var(--blanco);
+    font-weight: bold;
+    padding: 16px;
+    width: 50%;
+    margin-left: 25%;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+}
+
+.exp-main{
+    width: 70%;
+
+    margin: 50px 15%;
+    padding: 16px;
+  
+}
+
+.exp-main a{
+
+    text-decoration: none;
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-size: 22px;
+    padding: 8px;
+    width: 30%;
+    margin-left: 40%;
+    display: block;
+    text-align: center;
+}
+
+.exp-main a:hover{
+    background-color: var(--negro-transparente);
+}
+.art-exp{
+    display: flex;
+    gap: 20%;
+
+}
+
+.left-art-exp{
+    justify-content: flex-start;
+}
+
+.right-art-exp{
+    justify-content: flex-end;
+}
+
+.art-exp-frame{
+    width: 30%;
+    border-style: solid;
+    border-color: var(--negro);
+    border-width: 3px;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blanco);
+}
+
+.left-photo{
+    transform: rotate(5deg);
+}
+
+.right-photo{
+    transform: rotate(-5deg);
+}
+
+.art-exp-img{
+    width: 90%;
+    height: 90%;
+    border-style: solid;
+}
+
+.art-exp-title{
+    color: var(--blanco);
+    font-size: 30px;
+    align-self: center;
+    max-width: 50%;
+}
+
+.exp1-australia{
+    background-image: url("https://i.pinimg.com/564x/cc/92/23/cc92234ac929ee2abd697b36bb70c825.jpg");
+}
+
+.exp2-australia{
+    background-image: url("https://i.pinimg.com/564x/53/36/19/5336197743edf98e5ed102b5c91e58b7.jpg");
+}
+
+.exp3-australia{
+    background-image: url("https://i.pinimg.com/564x/98/6d/9e/986d9ecec85fe56e032075790c4787b0.jpg");
+}
+
+.exp1-sudafrica{
+    background-image: url("https://i.pinimg.com/564x/e6/7d/1e/e67d1ec8b5970b10336c6d949d9d04bc.jpg");
+}
+
+.exp2-sudafrica{
+    background-image: url("https://i.pinimg.com/564x/44/09/2e/44092e1a52a61cdeb81ed6e628373481.jpg");
+}
+
+.exp3-sudafrica{
+    background-image: url("https://i.pinimg.com/564x/17/d4/78/17d478a4db986979bdde5dbb465b3e12.jpg");
+}
+
+.exp1-indonesia{
+    background-image: url("https://i.pinimg.com/564x/7f/5b/6d/7f5b6d7b400cc1538880b62452cac5ef.jpg");
+}
+
+.exp2-indonesia{
+    background-image: url("https://i.pinimg.com/564x/91/65/5e/91655ed75e4f04c28bce0f5e12325cfe.jpg");
+}
+
+.exp3-indonesia{
+    background-image: url("https://i.pinimg.com/564x/fa/dd/8a/fadd8ac42249f9b400014badd3f7e8ce.jpg");
+}
+
+.exp1-costarica{
+    background-image: url("https://i.pinimg.com/736x/c4/56/28/c45628ee2a15cdea626f96fca5a42660.jpg");
+}
+
+.exp2-costarica{
+    background-image: url("https://i.pinimg.com/564x/c6/85/48/c68548361bca72c3430bd33ea5ca1526.jpg");
+}
+
+.exp3-costarica{
+    background-image: url("https://i.pinimg.com/736x/d8/a0/4a/d8a04a3c5cbaa49efc42b80f0147c946.jpg");
+}
+
+.exp1-suecia{
+    background-image: url("https://i.pinimg.com/564x/6e/f6/bb/6ef6bb04894d88eaa6f7a4e7da00e622.jpg");
+}
+
+.exp2-suecia{
+    background-image: url("https://i.pinimg.com/736x/1d/9d/b6/1d9db67b0554cfd874c1e241e5cde3ea.jpg");
+}
+
+.exp3-suecia{
+    background-image: url("https://i.pinimg.com/564x/e0/94/fb/e094fb6cfc0417b218490903fe4bde24.jpg");
+}
+
+
+
