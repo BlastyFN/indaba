@@ -1,94 +1,352 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/global.css">
+    <meta name="description" content="INDABA | Atelier de Viajes de Ultra-Lujo. Alta tecnología, confort 7 estrellas y expediciones profundas en los santuarios más exclusivos del planeta.">
+    <title>INDABA | Luxury Travel Atelier & High-Tech Expeditions</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    
-    <title>Indaba</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-    <header class="box-shadow">
-        
-        <nav>
-            <ul>
-                <!-- <li><a href="">Inicio</a></li> -->
-                <a href="index.html"><h1>Indaba</h1></a>
-                <li><a href="experiencias.html">Experiencias</a></li>
-                <li><a href="reserva.html">Reserva</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-            </ul>
-        </nav>
+
+    <!-- FLOATING GLASS HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-symbol">I</div>
+                <div class="logo-text">INDABA<span>.</span></div>
+            </a>
+
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                    <li><a href="experiencias.html" class="nav-link">Experiencias</a></li>
+                    <li><a href="nosotros.html" class="nav-link">Filosofía</a></li>
+                    <li><a href="reserva.html" class="nav-link">Concierge & Reserva</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="reserva.html" class="btn-luxury">Diseñar Itinerario</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú de navegación">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
     </header>
-    <main class="img-main main-sudafrica foto-cover box-shadow" id="mainFrame">
-        <button class="arrow" id="arrow-left"><</button>
-        <h1 class="country-title" id="country-title">SUDÁFRICA</h1>
-        <button class="arrow" id="arrow-right">></button>
-    </main>
-    <article class="main-article box-shadow">
-        <section class="article-text">
-            
-            <h1 class="fondo-arcilla">ESCRIBE TU PRÓXIMA HISTORIA</h1>
-            
-            <div class="article-paragraph fondo-arcilla-transparente">
-                <p>Cada viaje es una historia única. </p>
-                <p>Explora destinos exóticos, vive aventuras inolvidables y descubre un nuevo nivel de lujo sostenible</p>
-                <p>En nuestras locaciones, cada estancia es una oportunidad para conectar contigo mismo, con la naturaleza y con las culturas del mundo.</p>
-                <a href="">Empieza a escribir tu próxima historia</a>
-            
+
+    <!-- HERO SECTION WITH TELEMETRY & DYNAMIC DESTINATIONS -->
+    <section class="hero-wrapper" id="heroWrapper">
+        <div class="hero-background active" id="heroBg" style="background-image: url('./assets/sudafrica-main.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-scanline"></div>
+
+        <div class="hero-content">
+            <!-- Left Hero Content -->
+            <div class="hero-text">
+                <div class="hero-subtitle-wrapper">
+                    <span class="pulse-dot"></span>
+                    <span class="badge-tech">Telemetría de Viaje en Vivo</span>
+                </div>
+                <h1 class="hero-title">Donde la <span class="text-gold-gradient">Alta Tecnología</span> redefine el Viaje de Lujo.</h1>
+                <p class="hero-description">
+                    Indaba es un atelier de expediciones hiperpersonalizadas. Fusionamos algoritmos predictivos, aviación privada y lodges de autor con la inmersión humana más profunda en la naturaleza y cultura de cada destino.
+                </p>
+                <div class="hero-actions">
+                    <a href="experiencias.html" class="btn-luxury">Explorar Colección 2026</a>
+                    <a href="reserva.html" class="btn-secondary">Consulta con Concierge</a>
+                </div>
             </div>
-        </section>
-        <section class="article-img foto-cover main-historia">
 
-        </section>
-        
-    </article>
-    <article class="main-article box-shadow">
-        <section class="article-img foto-cover main-destino">
-            
-        </section>
-        <section class="article-text">
-            <h1 class="fondo-hoja">PARA CADA GUSTO, UN DESTINO</h1>
-            <div class="article-paragraph fondo-hoja-transparente">
-                <p>¿Anhelas la emoción de explorar selvas tropicales exuberantes o la serenidad de los fiordos nórdicos?</p>
-                <p>Indaba te invita a un viaje alrededor del mundo, donde cada destino te ofrece una experiencia única y auténtica. </p>
-                <p>Desde las playas paradisíacas del Pacífico hasta los paisajes nevados de Suecia, nuestra colección de hoteles eco-lujosos te permite conectar con la naturaleza en su estado más puro.</p>
-                <a href="">Ver fotos</a>
-            
+            <!-- Right Hero Telemetry HUD Card -->
+            <div class="hero-telemetry-hud glass-card">
+                <div class="hud-header">
+                    <div>
+                        <span class="hud-tag" id="hudTag">Santuario Safari & Vida Salvaje</span>
+                        <h2 class="hud-destination-name" id="hudTitle">SUDÁFRICA</h2>
+                    </div>
+                    <span class="badge-gold" id="hudExclusivity">Acceso Tier 1</span>
+                </div>
+
+                <div class="hud-grid">
+                    <div class="hud-metric">
+                        <span class="hud-label">Coordenadas GPS</span>
+                        <span class="hud-value tech" id="hudCoords">24.01° S, 31.48° E</span>
+                    </div>
+                    <div class="hud-metric">
+                        <span class="hud-label">Clima & Época Óptima</span>
+                        <span class="hud-value" id="hudClimate">26°C · Temporada Seca</span>
+                    </div>
+                    <div class="hud-metric">
+                        <span class="hud-label">Alojamiento de Autor</span>
+                        <span class="hud-value" id="hudLodge">Singita Lebombo Lodge</span>
+                    </div>
+                    <div class="hud-metric">
+                        <span class="hud-label">Huella de Carbono</span>
+                        <span class="hud-value tech" id="hudCarbon">100% Compensada</span>
+                    </div>
+                </div>
+
+                <div class="hud-footer">
+                    <div class="hud-indicators" id="hudIndicators"></div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button class="carousel-nav-btn" id="prevHeroBtn" aria-label="Destino Anterior">&#8592;</button>
+                        <button class="carousel-nav-btn" id="nextHeroBtn" aria-label="Destino Siguiente">&#8594;</button>
+                    </div>
+                </div>
             </div>
-        </section>
-        
-        
-    </article>
+        </div>
+    </section>
 
+    <!-- SECTION: THE INDABA TRIAD (PHILOSOPHY & PILLARS) -->
+    <section class="section-padding container">
+        <div class="section-header">
+            <span class="badge-gold">El Estándar Indaba</span>
+            <h2 class="section-title">La Trinidad del <span class="text-gold-gradient">Nuevo Lujo</span></h2>
+            <p class="section-subtitle">
+                No organizamos viajes convencionales. Creamos expediciones diseñadas milimétricamente donde la tecnología silenciosa potencia el confort absoluto y la conexión humana.
+            </p>
+        </div>
 
-    <article class="main-article box-shadow">
-        <section class="article-text">
-            <h1 class="fondo-naranja">TU AVENTURA, A TU MEDIDA</h1>
-            <div class="article-paragraph fondo-naranja-transparente">
-                <p>Indaba te ofrece la oportunidad de vivir experiencias de lujo en armonía con la naturaleza. </p>
-                <p>Nuestros expertos trabajarán contigo para crear un itinerario a medida que se adapte a tus gustos y preferencias.</p>
-                <p>Disfruta de un servicio personalizado y de alta calidad con nosotros.</p>
-                <a href="">Contáctanos</a>
-            
+        <div class="triad-grid">
+            <!-- Pillar 1: High-Tech -->
+            <div class="triad-card glass-card">
+                <div class="triad-icon-box tech">⚡</div>
+                <h3>Tecnología Invisible</h3>
+                <p>
+                    Algoritmos predictivos de clima y fauna en tiempo real, enlace satelital 24/7 con tu concierge personal y biometría para un tránsito fluido sin filas ni esperas.
+                </p>
+                <ul class="triad-feature-list">
+                    <li><span class="bullet">✦</span> Telemetría de ruta y microclimas</li>
+                    <li><span class="bullet">✦</span> Concierge satelital cifrado 24/7</li>
+                    <li><span class="bullet">✦</span> Logística privada automatizada</li>
+                </ul>
             </div>
-        </section>
-        <section class="article-img foto-cover main-medida">
 
-        </section>
-        
-    </article>
-    
+            <!-- Pillar 2: Supreme Comfort -->
+            <div class="triad-card glass-card">
+                <div class="triad-icon-box">✦</div>
+                <h3>Confort Sin Concesiones</h3>
+                <p>
+                    Vuelos chárter privados, reserva integral de villas y eco-lodges galardonados con estrellas Michelin. Máxima privacidad y descanso reparador en los confines del mundo.
+                </p>
+                <ul class="triad-feature-list">
+                    <li><span class="bullet">✦</span> Aviación privada y transfers en helicóptero</li>
+                    <li><span class="bullet">✦</span> Spas holísticos y bienestar biófilo</li>
+                    <li><span class="bullet">✦</span> Chefs privados con cocina de autor</li>
+                </ul>
+            </div>
 
-    <footer>
-        <p>INDABA CORP</p>
-        <p>Contacto: a23110322@ceti.mx</p>
+            <!-- Pillar 3: Deep Immersion -->
+            <div class="triad-card glass-card">
+                <div class="triad-icon-box deep">🌍</div>
+                <h3>Inmersión Profunda</h3>
+                <p>
+                    Acceso exclusivo a reservas biológicas restringidas, acompañamiento de biólogos y antropólogos de renombre, y encuentros auténticos con custodios de tradiciones milenarias.
+                </p>
+                <ul class="triad-feature-list">
+                    <li><span class="bullet">✦</span> Expediciones científicas y de conservación</li>
+                    <li><span class="bullet">✦</span> Acceso a santuarios fuera de catálogo</li>
+                    <li><span class="bullet">✦</span> Vínculos culturales respetuosos y genuinos</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: FEATURED CURATED EXPEDITIONS -->
+    <section class="section-padding container">
+        <div class="section-header">
+            <span class="badge-tech">Colección Destacada</span>
+            <h2 class="section-title">Expediciones de Autor</h2>
+            <p class="section-subtitle">
+                Una selección curada de nuestras travesías más demandadas para la temporada actual.
+            </p>
+        </div>
+
+        <div class="expeditions-grid">
+            <!-- Card 1: Sudáfrica -->
+            <article class="expedition-card">
+                <div class="expedition-img-box">
+                    <img src="./assets/sudafrica-main.jpg" alt="Safari de Ultra Lujo en Sudáfrica" class="expedition-img">
+                    <span class="expedition-badge">Santuario Safari</span>
+                </div>
+                <div class="expedition-body">
+                    <span class="expedition-country">Sudáfrica · Kruger & Cape Town</span>
+                    <h3 class="expedition-title">Gran Safari Kruger & Viñedos de Franschhoek</h3>
+                    <p class="expedition-desc">
+                        Rastreo de los Big Five con guías botánicos de élite, vuelos escénicos en helicóptero sobre los Doce Apóstoles y catas privadas en bodegas centenarias.
+                    </p>
+                    <div class="expedition-meta">
+                        <div class="expedition-price">
+                            Itinerario desde
+                            <strong>$14,500 USD / pax</strong>
+                        </div>
+                        <a href="experiencias.html" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Detalles</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2: Suecia Ártica -->
+            <article class="expedition-card">
+                <div class="expedition-img-box">
+                    <img src="./assets/suecia-main.jpg" alt="Expedición Ártica y Auroras Boreales en Suecia" class="expedition-img">
+                    <span class="expedition-badge">Expedición Ártica</span>
+                </div>
+                <div class="expedition-body">
+                    <span class="expedition-country">Suecia · Laponia & Abisko</span>
+                    <h3 class="expedition-title">Auroras Boreales & Lodges de Cristal</h3>
+                    <p class="expedition-desc">
+                        Caza astronómica guiada de auroras boreales con telescopios de alta resolución, trineos de perros huskies siberianos y saunas flotantes sobre fiordos helados.
+                    </p>
+                    <div class="expedition-meta">
+                        <div class="expedition-price">
+                            Itinerario desde
+                            <strong>$12,800 USD / pax</strong>
+                        </div>
+                        <a href="experiencias.html" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Detalles</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3: Indonesia Secreta -->
+            <article class="expedition-card">
+                <div class="expedition-img-box">
+                    <img src="./assets/indonesia-main.jpg" alt="Yates Privados y Selva Primitiva en Indonesia" class="expedition-img">
+                    <span class="expedition-badge">Archipiélago Privado</span>
+                </div>
+                <div class="expedition-body">
+                    <span class="expedition-country">Indonesia · Raja Ampat & Bali</span>
+                    <h3 class="expedition-title">Navegación Privada Phinisi & Selva de Borneo</h3>
+                    <p class="expedition-desc">
+                        Crucero en velero tradicional de lujo por los atolones vírgenes de Raja Ampat, buceo con mantarrayas y encuentro con orangutanes en santuarios protegidos.
+                    </p>
+                    <div class="expedition-meta">
+                        <div class="expedition-price">
+                            Itinerario desde
+                            <strong>$16,200 USD / pax</strong>
+                        </div>
+                        <a href="experiencias.html" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Detalles</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- SECTION: ATELIER ENGINE BANNER -->
+    <section class="container" style="margin-bottom: 6rem;">
+        <div class="atelier-banner">
+            <div class="atelier-banner-grid">
+                <div class="atelier-banner-content">
+                    <span class="badge-tech">Atelier Digital & Concierge 1:1</span>
+                    <h2 style="font-size: 2.4rem;">Diseñamos tu viaje alrededor de tu tiempo, ritmo y visión.</h2>
+                    <p>
+                        No existen dos expediciones idénticas en Indaba. Nuestro motor algorítmico calcula los mejores slots de aviación privada, microclimas y aperturas exclusivas para construir una propuesta irrepetible.
+                    </p>
+                    <div class="atelier-features-grid">
+                        <div class="atelier-feature-item">
+                            <span style="color: var(--emerald-accent);">✦</span>
+                            Cotización multimonedas en vivo
+                        </div>
+                        <div class="atelier-feature-item">
+                            <span style="color: var(--emerald-accent);">✦</span>
+                            SLA de respuesta VIP &lt; 2 horas
+                        </div>
+                        <div class="atelier-feature-item">
+                            <span style="color: var(--emerald-accent);">✦</span>
+                            Acceso a santuarios no comerciales
+                        </div>
+                        <div class="atelier-feature-item">
+                            <span style="color: var(--emerald-accent);">✦</span>
+                            Garantía de Carbono Negativo
+                        </div>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <a href="reserva.html" class="btn-luxury">Iniciar Cuestionario Concierge</a>
+                    </div>
+                </div>
+
+                <div class="atelier-card-visual">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-family: var(--font-main); font-size: 0.8rem; color: var(--gold-light); text-transform: uppercase;">Estado de Operaciones Globales</span>
+                        <span class="pulse-dot"></span>
+                    </div>
+                    <div style="padding: 1rem; background: rgba(0,0,0,0.3); border-radius: var(--radius-sm); border-left: 3px solid var(--emerald-accent);">
+                        <p style="font-size: 0.85rem; color: var(--text-pure); margin-bottom: 0.3rem;"><strong>Monitoreo Satelital Activo:</strong></p>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">14 aeronaves privadas en tránsito coordinado sin demoras meteorológicas.</p>
+                    </div>
+                    <div style="padding: 1rem; background: rgba(0,0,0,0.3); border-radius: var(--radius-sm); border-left: 3px solid var(--gold-primary);">
+                        <p style="font-size: 0.85rem; color: var(--text-pure); margin-bottom: 0.3rem;"><strong>Índice de Satisfacción VIP:</strong></p>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">99.8% Calificación Neta de Expediciones 2025/2026.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORPORATE LUXURY FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <div class="logo-symbol">I</div>
+                        <div class="logo-text">INDABA<span>.</span></div>
+                    </div>
+                    <p>
+                        Atelier de expediciones de ultra-lujo y consultoría de viajes a medida. Innovación tecnológica y sostenibilidad de vanguardia aplicadas al arte de viajar.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Destinos</h4>
+                    <ul class="footer-links">
+                        <li><a href="experiencias.html">Sudáfrica & Kruger</a></li>
+                        <li><a href="experiencias.html">Suecia & Laponia</a></li>
+                        <li><a href="experiencias.html">Indonesia & Raja Ampat</a></li>
+                        <li><a href="experiencias.html">Costa Rica & Osa</a></li>
+                        <li><a href="experiencias.html">Australia & Kimberley</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Atelier</h4>
+                    <ul class="footer-links">
+                        <li><a href="nosotros.html">Nuestra Filosofía</a></li>
+                        <li><a href="nosotros.html">Lujo Regenerativo</a></li>
+                        <li><a href="reserva.html">Calculadora de Viaje</a></li>
+                        <li><a href="reserva.html">Contacto VIP Concierge</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4 class="footer-heading">The Indaba Journal</h4>
+                    <p>Recibe reportes bimensuales sobre santuarios vírgenes, tecnología aeronáutica y aperturas exclusivas.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Gracias por suscribirte a The Indaba Journal.');">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn-luxury" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Unirse</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 INDABA LUXURY TRAVEL CORP. Todos los derechos reservados.</div>
+                <div>
+                    <a href="#">Privacidad</a>
+                    <a href="#">Términos del Atelier</a>
+                    <a href="#">Certificación Carbon Neutral</a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script src="./index.js"></script>
 </body>
-<script src="./index.js"></script>
 </html>

@@ -1,72 +1,189 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/global.css">
-    <link rel="stylesheet" href="./styles/exp.css">
+    <meta name="description" content="Colección de Expediciones Indaba. Experiencias profundas, safari privado, auroras boreales, navegación Phinisi y eco-lujo biófilo.">
+    <title>Experiencias de Autor | INDABA Luxury Atelier</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/exp.css">
 </head>
 <body>
-    <header class="box-shadow">
 
-        <nav>
-            <ul>
-                <!-- <li><a href="">Inicio</a></li> -->
-                <a href="index.html"><h1>Indaba</h1></a>
-                <li><a href="experiencias.html">Experiencias</a></li>
-                <li><a href="reserva.html">Reserva</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="exp-nav box-shadow foto-cover" id="btn-container-main"> 
-        <div class="expSelSection">
-            <button class="expSel fondo-naranja" id="0">SUDÁFRICA</button>
-            <button class="expSel fondo-arcilla" id="1">AUSTRALIA</button>
-            <button class="expSel fondo-hoja" id="2">INDONESIA</button>
-            <button class="expSel fondo-olivo" id="3">COSTA RICA</button>
-            <button class="expSel fondo-azul" id="4">SUECIA</button>
+    <!-- FLOATING GLASS HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-symbol">I</div>
+                <div class="logo-text">INDABA<span>.</span></div>
+            </a>
+
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="experiencias.html" class="nav-link active">Experiencias</a></li>
+                    <li><a href="nosotros.html" class="nav-link">Filosofía</a></li>
+                    <li><a href="reserva.html" class="nav-link">Concierge & Reserva</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="reserva.html" class="btn-luxury">Diseñar Itinerario</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú de navegación">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
-    </div>
-    <h1 class="expTitle box-shadow" id="INDABA-TITLE">Indaba</h1>
-    <main class="exp-main box-shadow " id="exp-main">
-        <article class="art-exp left-art-exp">
-            
-            <div class="art-exp-frame box-shadow right-photo">
-                <div class="art-exp-img foto-cover exp1-suecia" id="exp1">
+    </header>
 
+    <!-- MAIN EXPERIENCES WRAPPER -->
+    <main class="container">
+        
+        <!-- INTRO HERO -->
+        <section class="exp-hero">
+            <span class="badge-gold">Catálogo de Expediciones 2026</span>
+            <h1 style="font-size: clamp(2.5rem, 4.5vw, 4rem); margin: 1rem 0;">Santuarios de <span class="text-gold-gradient">Inmersión Pura</span></h1>
+            <p style="max-width: 680px; margin: 0 auto;">
+                Cada travesía es concebida como una obra irrepetible. Selecciona el destino para explorar las vivencias exclusivas, alojamientos de autor y la logística privada que hemos orquestado.
+            </p>
+
+            <!-- DESTINATION SELECTOR TABS -->
+            <div class="exp-tabs-wrapper">
+                <nav class="exp-tabs-nav" id="expTabsContainer">
+                    <button class="exp-tab-btn active" data-index="0">Sudáfrica</button>
+                    <button class="exp-tab-btn" data-index="1">Australia</button>
+                    <button class="exp-tab-btn" data-index="2">Indonesia</button>
+                    <button class="exp-tab-btn" data-index="3">Costa Rica</button>
+                    <button class="exp-tab-btn" data-index="4">Suecia</button>
+                </nav>
+            </div>
+        </section>
+
+        <!-- DESTINATION SHOWCASE BANNER -->
+        <section class="dest-banner" id="destBanner" style="background-image: url('./assets/sudafrica-main.jpg');">
+            <div class="dest-banner-content">
+                <div class="dest-banner-text">
+                    <span class="badge-tech" id="destBadge">Safari Privado & Conservación</span>
+                    <h2 class="dest-banner-title" id="destTitle">SUDÁFRICA</h2>
+                    <p class="dest-banner-desc" id="destDesc">
+                        Rastreo de fauna salvaje en reservas privadas del Gran Kruger, vuelos escénicos en helicóptero y el refinamiento de los viñedos históricos de Cape Town.
+                    </p>
+                </div>
+                <div>
+                    <a href="reserva.html" id="destCtaBtn" class="btn-luxury">Cotizar Esta Expedición</a>
                 </div>
             </div>
-            <h1 class="art-exp-title" id="exp1-title">Disfruta de las instalaciones más lujosas y sustentables de la isla</h1>
-        </article>
-        <article class="art-exp right-art-exp">
-            <h1 class="art-exp-title" id="exp2-title">EXP2</h1>
-            <div class="art-exp-frame box-shadow left-photo">
-                <div class="art-exp-img foto-cover exp2-suecia" id="exp2">
+        </section>
 
+        <!-- 3 SIGNATURE HIGHLIGHT EXPERIENCES -->
+        <section class="exp-highlights-section">
+            <div style="margin-bottom: 2rem;">
+                <h3 style="font-size: 2rem; font-weight: 700;">Vivencias de Autor del Itinerario</h3>
+                <p>Momentos clave diseñados para transformar tu perspectiva del mundo.</p>
+            </div>
+
+            <div class="exp-cards-grid" id="expCardsGrid">
+                <!-- Cards injected dynamically by JS -->
+            </div>
+        </section>
+
+        <!-- SANCTUARY & PRIVATE MOBILITY HUD -->
+        <section class="sanctuary-hud">
+            <div>
+                <span class="badge-gold">Alojamiento & Logística de Élite</span>
+                <h3 style="font-size: 2rem; margin: 0.8rem 0;" id="sanctuaryTitle">Singita Lebombo & Delaire Graff Estate</h3>
+                <p id="sanctuaryDesc">
+                    Arquitectura biófila suspendida sobre el río N’wanetsi en el Parque Nacional Kruger. Villas privadas con alberca de inmersión, bodegas privadas y servicio de mayordomía 24/7.
+                </p>
+            </div>
+
+            <div>
+                <div class="sanctuary-specs">
+                    <div class="spec-box">
+                        <span class="spec-title">Aviación y Traslados</span>
+                        <span class="spec-value" id="specAviation">Cessna Grand Caravan & Eurocopter B3</span>
+                    </div>
+                    <div class="spec-box">
+                        <span class="spec-title">Gastronomía de Autor</span>
+                        <span class="spec-value" id="specDining">Menú degustación maridado & Chef privado</span>
+                    </div>
+                    <div class="spec-box">
+                        <span class="spec-title">Acompañamiento Científico</span>
+                        <span class="spec-value" id="specGuide">Guía Naturalista Senior & Fotógrafo VIP</span>
+                    </div>
+                    <div class="spec-box">
+                        <span class="spec-title">Duración Sugerida</span>
+                        <span class="spec-value" id="specDuration">10 Días / 9 Noches</span>
+                    </div>
                 </div>
             </div>
-        </article>
-        <article class="art-exp left-art-exp">
-            <div class="art-exp-frame box-shadow right-photo">
-                <div class="art-exp-img foto-cover exp3-suecia" id="exp3">
+        </section>
 
-                </div>
-            </div>
-            <h1 class="art-exp-title" id="exp3-title">EXP3</h1>
-        </article>
-        <a href="reserva.html">RESERVAR</a>
     </main>
-    <footer>
-        <p>INDABA CORP</p>
-        <p>Contacto: a23110322@ceti.mx</p>
+
+    <!-- CORPORATE LUXURY FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <div class="logo-symbol">I</div>
+                        <div class="logo-text">INDABA<span>.</span></div>
+                    </div>
+                    <p>
+                        Atelier de expediciones de ultra-lujo y consultoría de viajes a medida. Innovación tecnológica y sostenibilidad de vanguardia aplicadas al arte de viajar.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Destinos</h4>
+                    <ul class="footer-links">
+                        <li><a href="experiencias.html">Sudáfrica & Kruger</a></li>
+                        <li><a href="experiencias.html">Suecia & Laponia</a></li>
+                        <li><a href="experiencias.html">Indonesia & Raja Ampat</a></li>
+                        <li><a href="experiencias.html">Costa Rica & Osa</a></li>
+                        <li><a href="experiencias.html">Australia & Kimberley</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Atelier</h4>
+                    <ul class="footer-links">
+                        <li><a href="nosotros.html">Nuestra Filosofía</a></li>
+                        <li><a href="nosotros.html">Lujo Regenerativo</a></li>
+                        <li><a href="reserva.html">Calculadora de Viaje</a></li>
+                        <li><a href="reserva.html">Contacto VIP Concierge</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4 class="footer-heading">The Indaba Journal</h4>
+                    <p>Recibe reportes bimensuales sobre santuarios vírgenes, tecnología aeronáutica y aperturas exclusivas.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Gracias por suscribirte a The Indaba Journal.');">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn-luxury" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Unirse</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 INDABA LUXURY TRAVEL CORP. Todos los derechos reservados.</div>
+                <div>
+                    <a href="#">Privacidad</a>
+                    <a href="#">Términos del Atelier</a>
+                    <a href="#">Certificación Carbon Neutral</a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script src="./experiencias.js"></script>
 </body>
-<script src="./experiencias.js"></script>
 </html>

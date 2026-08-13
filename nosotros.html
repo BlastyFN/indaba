@@ -1,89 +1,329 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/global.css">
-    <link rel="stylesheet" href="./styles/main.css">
+    <meta name="description" content="Filosofía INDABA. El origen de nuestro atelier de viajes, el compromiso de lujo regenerativo, tecnología con alma y preservación de santuarios naturales.">
+    <title>Filosofía & Manifiesto | INDABA Luxury Travel Atelier</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-   
-    <title>Nosotros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/global.css">
+    <style>
+      .about-hero {
+        padding: 9rem 0 4rem 0;
+        text-align: center;
+        background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
+      }
+      .manifesto-card {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-highlight);
+        border-radius: var(--radius-lg);
+        padding: 4rem;
+        margin: 3rem 0 6rem 0;
+        box-shadow: var(--shadow-gold);
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 3.5rem;
+        align-items: center;
+      }
+      .manifesto-quote {
+        font-size: 1.6rem;
+        font-style: italic;
+        color: var(--gold-light);
+        line-height: 1.5;
+        border-left: 3px solid var(--gold-primary);
+        padding-left: 1.5rem;
+        margin: 1.5rem 0;
+      }
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        margin: 4rem 0;
+      }
+      .stat-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 2.2rem 1.5rem;
+        text-align: center;
+        transition: var(--transition-smooth);
+      }
+      .stat-card:hover {
+        border-color: var(--border-highlight);
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-gold);
+      }
+      .stat-number {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: var(--text-pure);
+        margin-bottom: 0.5rem;
+        font-family: var(--font-main);
+      }
+      .stat-label {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .curators-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin: 3rem 0 6rem 0;
+      }
+      .curator-card {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        transition: var(--transition-smooth);
+      }
+      .curator-card:hover {
+        border-color: var(--border-highlight);
+        transform: translateY(-6px);
+      }
+      .curator-img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+      }
+      .curator-info {
+        padding: 2rem;
+      }
+      .curator-role {
+        color: var(--emerald-accent);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-family: var(--font-main);
+        font-weight: 600;
+      }
+      @media (max-width: 1024px) {
+        .manifesto-card { grid-template-columns: 1fr; padding: 2.5rem; }
+        .stats-grid { grid-template-columns: 1fr 1fr; }
+        .curators-grid { grid-template-columns: 1fr 1fr; }
+      }
+      @media (max-width: 640px) {
+        .stats-grid { grid-template-columns: 1fr; }
+        .curators-grid { grid-template-columns: 1fr; }
+      }
+    </style>
 </head>
 <body>
-    <header class="box-shadow">
-        
-        <nav>
-            <ul>
-                <!-- <li><a href="">Inicio</a></li> -->
-                <a href="index.html"><h1>Indaba</h1></a>
-                <li><a href="experiencias.html">Experiencias</a></li>
-                <li><a href="reserva.html">Reserva</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="img-main main-nosotros foto-cover box-shadow" id="mainFrame">
 
-        <h1 class="country-title" id="country-title">NOSOTROS</h1>
+    <!-- FLOATING GLASS HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-symbol">I</div>
+                <div class="logo-text">INDABA<span>.</span></div>
+            </a>
+
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="experiencias.html" class="nav-link">Experiencias</a></li>
+                    <li><a href="nosotros.html" class="nav-link active">Filosofía</a></li>
+                    <li><a href="reserva.html" class="nav-link">Concierge & Reserva</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="reserva.html" class="btn-luxury">Diseñar Itinerario</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú de navegación">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENT WRAPPER -->
+    <main class="container">
+        
+        <!-- HERO -->
+        <section class="about-hero">
+            <span class="badge-gold">El Origen & Propósito</span>
+            <h1 style="font-size: clamp(2.5rem, 4.5vw, 4.2rem); margin: 1.2rem 0;">Donde la Tierra Ancestral y el <span class="text-gold-gradient">Futuro Tecnológico</span> Convergen</h1>
+            <p style="max-width: 720px; margin: 0 auto;">
+                Indaba nace de la convicción de que el viaje de mayor lujo no es el que más ostenta, sino el que más transforma.
+            </p>
+        </section>
+
+        <!-- MANIFESTO CARD -->
+        <section class="manifesto-card">
+            <div>
+                <span class="badge-tech">El Significado de Indaba</span>
+                <h2 style="font-size: 2.2rem; margin: 1rem 0;">La Gran Asamblea del Viaje</h2>
+                <div class="manifesto-quote">
+                    "En la tradición Zulu, un 'Indaba' es el concilio solemne donde los ancianos, líderes y sabios se reúnen en círculo para tomar las decisiones que marcarán a las futuras generaciones."
+                </div>
+                <p style="line-height: 1.8;">
+                    Trasladamos ese espíritu al arte del viaje contemporáneo. En nuestro atelier, el 'Indaba' es el diálogo íntimo entre nuestros clientes, nuestros científicos de campo y los guardianes locales de cada destino, diseñando una expedición que honra la tierra y eleva el espíritu humano.
+                </p>
+            </div>
+
+            <div style="border-radius: var(--radius-md); overflow: hidden; height: 100%; min-height: 320px;">
+                <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=80" alt="Reserva Natural Indaba" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </section>
+
+        <!-- IMPACT STATS COUNTER -->
+        <section>
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <span class="badge-gold">Métricas de Lujo Regenerativo</span>
+                <h2 style="font-size: 2.4rem; margin-top: 0.8rem;">Impacto Medible en Cada Expedición</h2>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number text-gold-gradient">+15,000</div>
+                    <div class="stat-label">Hectáreas de Selva y Sabana Protegidas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number text-gold-gradient">200%</div>
+                    <div class="stat-label">Compensación de Huella de Carbono</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number text-gold-gradient">99.8%</div>
+                    <div class="stat-label">Satisfacción en Expediciones VIP</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number text-gold-gradient">Tier 1</div>
+                    <div class="stat-label">Acceso a Santuarios Restringidos</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CURATORS & ADVISORY COUNCIL -->
+        <section style="margin-top: 6rem;">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto;">
+                <span class="badge-tech">Consejo de Expedición</span>
+                <h2 style="font-size: 2.4rem; margin-top: 0.8rem;">Los Curadores Detrás de Cada Ruta</h2>
+                <p>Nuestras experiencias no son trazadas por agentes turísticos ordinarios, sino por exploradores, biólogos y diseñadores de rutas de élite.</p>
+            </div>
+
+            <div class="curators-grid">
+                <div class="curator-card">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Dra. Aisha Mansoor" class="curator-img">
+                    <div class="curator-info">
+                        <span class="curator-role">Directora de Conservación & Fauna</span>
+                        <h3 style="font-size: 1.3rem; margin: 0.4rem 0;">Dra. Aisha Mansoor</h3>
+                        <p style="font-size: 0.9rem;">Bióloga de vida salvaje con 18 años liderando proyectos de rastreo y preservación en el Gran Kruger y Serengeti.</p>
+                    </div>
+                </div>
+
+                <div class="curator-card">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Henrik Lindqvist" class="curator-img">
+                    <div class="curator-info">
+                        <span class="curator-role">Jefe de Expediciones Polares</span>
+                        <h3 style="font-size: 1.3rem; margin: 0.4rem 0;">Henrik Lindqvist</h3>
+                        <p style="font-size: 0.9rem;">Navegante ártico y astrofísico residente en Kiruna, especializado en logística de auroras boreales y alta montaña.</p>
+                    </div>
+                </div>
+
+                <div class="curator-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Valeria Cordero" class="curator-img">
+                    <div class="curator-info">
+                        <span class="curator-role">Arquitecta de Rutas & Aviación</span>
+                        <h3 style="font-size: 1.3rem; margin: 0.4rem 0;">Valeria Cordero</h3>
+                        <p style="font-size: 0.9rem;">Especialista en aviación privada ejecutiva y logística para itinerarios sin transbordos comerciales ni demoras.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="glass-card" style="padding: 4rem; text-align: center; margin-bottom: 6rem; background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(13, 18, 25, 0.9) 100%);">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Comienza tu diálogo con el Atelier</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem auto;">
+                Diseñamos cada travesía desde una página en blanco. Conversemos sobre tu visión de viaje.
+            </p>
+            <a href="reserva.html" class="btn-luxury">Iniciar Solicitud de Expedición</a>
+        </section>
 
     </main>
 
-    <article class="main-article box-shadow">
-        <section class="article-text">
-            
-            <h1 class="fondo-arcilla">Indaba</h1>
-            
-            <div class="article-paragraph fondo-arcilla-transparente">
-                <p>La historia. </p>
-                <p>Indaba significa "La historia" en Zulú, una cultura de origen sudafricano, donde está nuestra sede principal</p>
-                <p>Nuestra misión es ayudarte a escribir tu historia, a través de experiencias únicas e irrepetibles.</p>
-            
+    <!-- CORPORATE LUXURY FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <div class="logo-symbol">I</div>
+                        <div class="logo-text">INDABA<span>.</span></div>
+                    </div>
+                    <p>
+                        Atelier de expediciones de ultra-lujo y consultoría de viajes a medida. Innovación tecnológica y sostenibilidad de vanguardia aplicadas al arte de viajar.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Destinos</h4>
+                    <ul class="footer-links">
+                        <li><a href="experiencias.html">Sudáfrica & Kruger</a></li>
+                        <li><a href="experiencias.html">Suecia & Laponia</a></li>
+                        <li><a href="experiencias.html">Indonesia & Raja Ampat</a></li>
+                        <li><a href="experiencias.html">Costa Rica & Osa</a></li>
+                        <li><a href="experiencias.html">Australia & Kimberley</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Atelier</h4>
+                    <ul class="footer-links">
+                        <li><a href="nosotros.html">Nuestra Filosofía</a></li>
+                        <li><a href="nosotros.html">Lujo Regenerativo</a></li>
+                        <li><a href="reserva.html">Calculadora de Viaje</a></li>
+                        <li><a href="reserva.html">Contacto VIP Concierge</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4 class="footer-heading">The Indaba Journal</h4>
+                    <p>Recibe reportes bimensuales sobre santuarios vírgenes, tecnología aeronáutica y aperturas exclusivas.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Gracias por suscribirte a The Indaba Journal.');">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn-luxury" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Unirse</button>
+                    </form>
+                </div>
             </div>
-        </section>
-        <section class="article-img foto-cover main-zulu">
 
-        </section>
-        
-    </article>
-
-    <article class="main-article box-shadow">
-        <section class="article-img foto-cover main-eco">
-            
-        </section>
-        <section class="article-text">
-            <h1 class="fondo-olivo">Sostenible</h1>
-            <div class="article-paragraph fondo-olivo-transparente">
-                <p>Somos una cadena consciente</p>
-                <p>Promovemos la persistencia cultural de nuestros destinos mediante el respeto a las tradiciones y costumbres locales.</p>
-                <p>Y ofrecemos servicios responsables con el medio ambiente, preservando el planeta.</p>
-            
+            <div class="footer-bottom">
+                <div>&copy; 2026 INDABA LUXURY TRAVEL CORP. Todos los derechos reservados.</div>
+                <div>
+                    <a href="#">Privacidad</a>
+                    <a href="#">Términos del Atelier</a>
+                    <a href="#">Certificación Carbon Neutral</a>
+                </div>
             </div>
-        </section>
-        
-        
-    </article>
-
-    <article class="main-article box-shadow">
-        <section class="article-text">
-            <h1 class="fondo-azul">INOVLIDABLE</h1>
-            <div class="article-paragraph fondo-azul-transparente">
-                <p>Nuestras experiencias son únicas en el mundo. </p>
-                <p>Ofrecemos historias con potencial ilimitado en el disfrute, con amigos, pareja o en solitaroi.</p>
-                <p>En Indaba, comienza un nuevo capítulo en tu vida.</p>
-            
-            </div>
-        </section>
-        <section class="article-img foto-cover main-sky">
-
-        </section>
-        
-    </article>
-     <footer>
-        <p>INDABA CORP</p>
-        <p>Contacto: a23110322@ceti.mx</p>
+        </div>
     </footer>
+
+    <script>
+      const siteHeader = document.getElementById("siteHeader");
+      const mobileToggle = document.getElementById("mobileToggle");
+      const navMenu = document.getElementById("navMenu");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          siteHeader?.classList.add("scrolled");
+        } else {
+          siteHeader?.classList.remove("scrolled");
+        }
+      });
+
+      if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener("click", () => {
+          navMenu.classList.toggle("open");
+        });
+      }
+    </script>
 </body>
 </html>
